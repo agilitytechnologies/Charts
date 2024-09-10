@@ -22,7 +22,7 @@ open class MoveViewJob: ViewPortJob
             y: yValue
         )
         
-        transformer.pointValueToPixel(&pt)
-        viewPortHandler.centerViewPort(pt: pt, chart: view)
+        transformer?.pointValueToPixel(&pt)
+        viewPortHandler?.centerViewPort(pt: pt, chart: view ?? ChartViewBase())
     }
 }

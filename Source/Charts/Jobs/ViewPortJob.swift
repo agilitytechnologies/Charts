@@ -17,11 +17,11 @@ import CoreGraphics
 open class ViewPortJob: NSObject
 {
     internal var point: CGPoint = .zero
-    internal unowned var viewPortHandler: ViewPortHandler
+    internal weak var viewPortHandler: ViewPortHandler?
     internal var xValue = 0.0
     internal var yValue = 0.0
-    internal unowned var transformer: Transformer
-    internal unowned var view: ChartViewBase
+    internal weak var transformer: Transformer?
+    internal weak var view: ChartViewBase?
 
     @objc public init(
         viewPortHandler: ViewPortHandler,
